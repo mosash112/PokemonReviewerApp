@@ -5,11 +5,11 @@ using PokemonReviewApp.Models;
 
 namespace PokemonReviewApp.Repository
 {
-    public class CountryRepositroy : ICountryRepository
+    public class CountryRepository : ICountryRepository
     {
         private readonly DataContext _context;
 
-        public CountryRepositroy(DataContext context)
+        public CountryRepository(DataContext context)
         {
             _context = context;
         }
