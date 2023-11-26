@@ -88,7 +88,7 @@ namespace PokemonReviewApp.Controllers
             var ownerMap = _mapper.Map<Owner>(ownerCreate);
             ownerMap.Country = _countryRepository.GetCountry(countryId);
 
-            if (!_ownerRepository.CreatOwner(ownerMap))
+            if (!_ownerRepository.CreateOwner(ownerMap))
             {
                 ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);

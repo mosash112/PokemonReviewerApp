@@ -82,7 +82,7 @@ namespace PokemonReviewApp.Controllers
 
             var categoryMap = _mapper.Map<Category>(categoryCreate);
 
-            if (!_categoryRepository.CreatCategory(categoryMap))
+            if (!_categoryRepository.CreateCategory(categoryMap))
             {
                 ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);

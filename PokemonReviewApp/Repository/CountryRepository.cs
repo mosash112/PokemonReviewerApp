@@ -18,7 +18,7 @@ namespace PokemonReviewApp.Repository
             return _context.Countries.Any(c => c.Id == id);
         }
 
-        public bool CreatCountry(Country country)
+        public bool CreateCountry(Country country)
         {
             _context.Add(country);
             return Save();

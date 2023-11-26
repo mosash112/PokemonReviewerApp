@@ -17,7 +17,7 @@ namespace PokemonReviewApp.Repository
             return _context.Categories.Any(c => c.Id == id);
         }
 
-        public bool CreatCategory(Category category)
+        public bool CreateCategory(Category category)
         {
             _context.Add(category);
             return Save();

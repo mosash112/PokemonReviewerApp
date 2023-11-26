@@ -16,7 +16,7 @@ namespace PokemonReviewApp.Repository
             _mapper = mapper;
         }
 
-        public bool CreatOwner(Owner owner)
+        public bool CreateOwner(Owner owner)
         {
             _context.Add(owner);
             return Save();
