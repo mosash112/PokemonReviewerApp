@@ -9,8 +9,5 @@ namespace PokemonReviewApp.Dto
         public String FirstName { get; set; }
 
         public String LastName { get; set; }
-
-        public ICollection<Review> Reviews { get; set; }
-
     }
 }
