@@ -12,7 +12,7 @@ namespace PokemonReviewApp.Repository
         {
             _context = context;
         }
-        public bool CategoriesExists(int id)
+        public bool CategoryExists(int id)
         {
             return _context.Categories.Any(c => c.Id == id);
         }
@@ -20,6 +20,12 @@ namespace PokemonReviewApp.Repository
         public bool CreateCategory(Category category)
         {
             _context.Add(category);
+            return Save();
+        }
+
+        public bool DeleteCategory(Category category)
+        {
+            _context.Remove(category);
             return Save();
         }
 
