@@ -13,7 +13,7 @@ namespace PokemonReviewApp.Repository
             _context = context;
         }
 
-        public bool CreatReview(Review review)
+        public bool CreateReview(Review review)
         {
             _context.Add(review);
             return Save();
@@ -43,6 +43,12 @@ namespace PokemonReviewApp.Repository
         {
             var saved = _context.SaveChanges();
             return saved > 0 ? true : false;
+        }
+
+        public bool UpdateReview(Review review)
+        {
+            _context.Update(review);
+            return Save();
         }
     }
 }
